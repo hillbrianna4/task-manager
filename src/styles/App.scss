@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import "properties.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins";
+  background-image:linear-gradient(to left, #aee6e6, #98acf8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 3rem 0;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  
+  background:rgba(255,255,255,0.4);
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  border-radius: 15px;
+  box-shadow:0.1em 0.5em 0.5em 0.5em rgba(0,0,0,0.2);
+}
+
+section {
+  display: flex;
+  width: 70rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  border: 1px solid $gold;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: .3rem 2rem;
+  background-color: $green;
+  border-color: $green;
+  color: $blue;
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+
+  &:hover {
+    background-color: $highlight;
+    border-color: $highlight;
+    cursor: pointer;
+    transition: 3s;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $highlight;
+    background-color: $highlight;
+    color: $white;
+  }
+
+  &.addTask {
+    font-size: 3rem;
+    padding: 0 0 0.4rem 0;
+    border-radius: 50%;
+    width: 3rem;
+    height: 2.5rem;
+    line-height: 1rem;
+    margin-top: 2rem;
+  }
+
+  &.moveTask {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0;
+    line-height: 1rem;
+  }
+
+  &.delete {
+    background-color: $pink;
+    border-color: $pink;
+
+    &:hover {
+      background-color: $red;
+      border-color: $red;
+      transition: .3s;
+    }
+  }
+}
+
+@media only screen and (max-width: 75rem) {
+  section,h1 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 75rem) {
+  .App {
+    width: initial;
+  }
+}
